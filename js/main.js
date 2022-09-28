@@ -22,8 +22,33 @@ let myButton = document.querySelector('button');
    let storedName = localStorage.getItem('name'); 
    myHeading.innerHTML = 'Welcome, ' + storedName; 
  } 
- // clic sur le button pour afficher el prompt et changer le nom  
- myButton.onclick = function() { 
-   setUserName(); 
- }
  
+ // counter plus
+
+ var plusBtn = document.getElementsByClassName('plusqty');
+
+ for (let plus of plusBtn){
+  plus.addEventListener('click', ()=>{
+    plus.previousElementSibling.innerText++;
+  })
+ }
+// counter minus
+
+ var lessBtn = document.getElementsByClassName('lessqty')
+
+ for (let minus of lessBtn){
+  minus.addEventListener('click', ()=>{
+    if (minus.nextElementSibling.innerText>1){
+      minus.nextElementSibling.innerText--
+    }
+  })
+}
+
+var deleteBtn = document.querySelectorAll(".icon");
+
+for (let i=0; i<deleteBtn.length ; i++){
+  deleteBtn[i].addEventListener('click', function(){
+    deleteBtn[i].parentElement.parentElement.remove()
+  })
+}
+
