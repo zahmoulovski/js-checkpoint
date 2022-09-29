@@ -34,6 +34,7 @@ let myButton = document.querySelector('button');
  for (let plus of plusBtn){
   plus.addEventListener('click', ()=>{
     plus.previousElementSibling.innerText++;
+    price()
   })
  }
 // counter minus
@@ -44,6 +45,7 @@ let myButton = document.querySelector('button');
   minus.addEventListener('click', ()=>{
     if (minus.nextElementSibling.innerText>1){
       minus.nextElementSibling.innerText--
+      price()
     }
   })
 }
@@ -53,18 +55,34 @@ var deleteBtn = document.querySelectorAll(".icon");
 for (let i=0; i<deleteBtn.length ; i++){
   deleteBtn[i].addEventListener('click', function(){
     deleteBtn[i].parentElement.parentElement.remove()
+    price()
+  })
+} 
+
+let hearts=document.getElementsByClassName('fa-heart');
+
+console.log(hearts,'hearts')
+
+for(let colors of hearts ){
+  colors.addEventListener('click',function(){
+    if(colors.style.color === 'grey' ){
+      colors.style.color="red"
+    }else{
+      colors.style.color = "grey"
+    }
   })
 }
 
-let hearticon = document.querySelector('.hearticon');
 
-hearticon.onclick = function() {
-  let mySrc = hearticon.getAttribute('src');
-  if(mySrc === './img/heart.png') {
-    hearticon.setAttribute ('src','./img/heart-hover.png');
-  } else {
-    hearticon.setAttribute ('src','./img/heart.png');
+// total price 
+
+function price() {
+  var quantity = document.getElementsByClassName('qty');
+  var unity = document.getElementsByClassName('unity');
+  let sum = 0;
+  for (let i = 0; i < unity.length; i++) {
+      sum += quantity[i].innerText * unity[i].innerText
   }
+  console.log(sum)
+  document.getElementById('tot').innerText = sum
 }
-
-

@@ -45,7 +45,7 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 10px 200px;
-    align-items: flex-end;
+    align-items: center;
     border-bottom: 1px solid #008b8b;
     position: sticky;
     top: 0;
@@ -116,10 +116,9 @@ header li{
     margin: 1%;
     position: absolute;
 }
-.hearticon {
-    width: 20px;
-    margin: 1%;
-    position: absolute;
+.fa-heart{
+    margin: 35%;
+    color: grey;
 }
 .lefticon{
     border-top-left-radius: 15px;
@@ -199,11 +198,11 @@ header li{
 .productprice{
     width: revert;
 }
-.unityprice{
+.unity{
     align-self: center;
     margin: 0;
 }
-.totalprice{
+.total{
     color: #fff;
     background-color: #008b8b;
     padding: 15px 50px;

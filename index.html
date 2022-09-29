@@ -6,9 +6,12 @@
         <title>Checkpoint DOM - Shopping Cart </title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./css/style.css">
-        <link 
-  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
-  rel="stylesheet"  type='text/css'>
+        <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous"
+  />
     </head>
     <body>
         <!-- Header -->
@@ -53,12 +56,12 @@
                         <span class="qty">1</span>
                         <span class="plusqty">+</span>
                     </div>
-                    <p class="unityprice"><b>Unit Price : </b>14.900 <span class="currency">TND</span></p>
-                    <p class="totalprice"><b>Total : </b>14.900 <span class="currency">TND</span></p>                                     
+                    <p class="unity">27.550</p>
+                    <p class="total">27550</p>                                   
                 </div>
 
                 <div class="producticon righticon">
-                    <img class="hearticon" src="./img/heart.png" alt="heart icon" onclick="changeImage()">
+                    <i class="fas fa-heart"></i>
                 </div>
             </div>
             <!-- Product 1 Div container -->
@@ -85,12 +88,11 @@
                         <span class="qty">1</span>
                         <span class="plusqty">+</span>
                     </div>
-                    <p class="unityprice"><b>Unit Price : </b>3.700 <span class="currency">TND</span></p>
-                    <p class="totalprice"><b>Total : </b>3.700 <span class="currency">TND</span></p>                                     
+                    <p class="unity">27550</p>
+                    <p class="total">27550</p> 
                 </div>
-
                 <div class="producticon righticon">
-                    <img class="hearticon" src="./img/heart.png" alt="heart icon" onclick="changeImage()">
+                    <i class="fas fa-heart"></i>
                 </div>
             </div>
             <!-- Product 2 Div container -->
@@ -117,12 +119,11 @@
                         <span class="qty">1</span>
                         <span class="plusqty">+</span>
                     </div>
-                    <p class="unityprice"><b>Unit Price : </b>10.000 <span class="currency">TND</span></p>
-                    <p class="totalprice"><b>Total : </b>10.000 <span class="currency">TND</span></p>                                     
+                    <p class="unity">27550</p>
+                    <p class="total">27550</p> 
                 </div>
-
                 <div class="producticon righticon">
-                    <img class="hearticon" src="./img/heart.png" alt="heart icon" onclick="changeImage()">
+                    <i class="fas fa-heart"></i>
                 </div>
             </div>
             <!-- Product 3 Div container -->
@@ -149,12 +150,12 @@
                         <span class="qty">1</span>
                         <span class="plusqty">+</span>
                     </div>
-                    <p class="unityprice"><b>Unit Price : </b>27.550 <span class="currency">TND</span></p>
-                    <p class="totalprice"><b>Total : </b>27.550 <span class="currency">TND</span></p>                                     
+                    <p class="unity">27550</p>
+                    <p class="total">27550</p>                                   
                 </div>
 
                 <div class="producticon righticon">
-                    <img class="hearticon" src="./img/heart.png" alt="heart icon" onclick="changeImage()">
+                    <i class="fas fa-heart"></i>
                 </div>
             </div>
             <!-- Product 4 Div container -->
@@ -164,12 +165,12 @@
         <!-- Footer -->
         <footer>
             <div class="leftfooter">
-                <h3>Subtotal : <span class="subtotal"></span><span class="currency">TND</span></h3>
-                <h4>Taxes (19%) : <span class="taxes"></span><span class="currency">TND</span></h4>
-                <h5>Shipping : 20.000<span class="currency">TND</span></h5>
+                <h3>Subtotal : <span class="subtotal"></span></h3>
+                <h4>Taxes (19%) : <span class="taxes"></span></h4>
+                <h5>Shipping : 20.000<span class="shipping"></span></h5>
             </div>
             <div class="rightfooter">
-                <h2>Total : <span class="currency">TND</span></h2>
+                <h2>Total : <span id="tot">0</span></h2>
                 <hr class="solid">
                 <a class="btn">Checkout</a>
             </div>
