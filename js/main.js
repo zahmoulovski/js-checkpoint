@@ -22,6 +22,10 @@ let myButton = document.querySelector('button');
    let storedName = localStorage.getItem('name'); 
    myHeading.innerHTML = 'Welcome, ' + storedName; 
  } 
+
+ myButton.onclick = function() {
+  setUserName();
+}
  
  // counter plus
 
@@ -51,4 +55,16 @@ for (let i=0; i<deleteBtn.length ; i++){
     deleteBtn[i].parentElement.parentElement.remove()
   })
 }
+
+let hearticon = document.querySelector('.hearticon');
+
+hearticon.onclick = function() {
+  let mySrc = hearticon.getAttribute('src');
+  if(mySrc === './img/heart.png') {
+    hearticon.setAttribute ('src','./img/heart-hover.png');
+  } else {
+    hearticon.setAttribute ('src','./img/heart.png');
+  }
+}
+
 

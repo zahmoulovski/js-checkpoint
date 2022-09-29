@@ -55,6 +55,7 @@ header{
     list-style: none;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 header li{
     padding: 0 25px;
@@ -66,6 +67,18 @@ header li{
 }
 .navmenu a:hover{
     color: #005252;
+    text-decoration: underline;
+}
+
+.btnuser{
+    padding: 10px;
+    background-color: #008b8b;
+    color: #fff;
+    font-family: 'Sansation', sans-serif;
+}
+
+.btnuser:hover{
+    background-color: #005252;
     text-decoration: underline;
 }
 
@@ -99,6 +112,11 @@ header li{
     background-color: #fff;
 }
 .icon{
+    width: 20px;
+    margin: 1%;
+    position: absolute;
+}
+.hearticon {
     width: 20px;
     margin: 1%;
     position: absolute;
