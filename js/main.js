@@ -6,7 +6,7 @@
 //** Med Yassine Zahmoul **//
 
 let myButton = document.querySelector('button'); 
- let myHeading = document.querySelector('h1'); 
+let myHeading = document.querySelector('h1'); 
   
  function setUserName() { 
    let myName = prompt('Please enter your name.'); 
@@ -15,7 +15,7 @@ let myButton = document.querySelector('button');
    } else { 
      localStorage.setItem('name', myName); 
      myHeading.innerHTML = 'Welcome, ' + myName; 
-     price()
+     price();
    } 
  } 
   
@@ -24,10 +24,14 @@ let myButton = document.querySelector('button');
  } else { 
    let storedName = localStorage.getItem('name'); 
    myHeading.innerHTML = 'Welcome, ' + storedName; 
+    // enable price calculation after welcome checkbox  
+   price();
  } 
 
  myButton.onclick = function() {
   setUserName();
+  // enable price calculation after welcome button click
+  price();
 }
  
  // counter plus
@@ -37,7 +41,7 @@ let myButton = document.querySelector('button');
  for (let plus of plusBtn){
   plus.addEventListener('click', ()=>{
     plus.previousElementSibling.innerText++;
-    price()
+    price();
   })
  }
 // counter minus
@@ -82,6 +86,8 @@ function price() {
   let sum = 0;
   for (let i = 0; i < unity.length; i++) {
       sum += quantity[i].innerText * unity[i].innerText
-  }
-  document.getElementById('tot').innerText = sum
+
+	  }
+  // insert calculated sum in html page and have it rouned to two digits after comma
+  document.getElementById('tot').innerText = sum.toFixed(3)
 }
