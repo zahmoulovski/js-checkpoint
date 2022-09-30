@@ -83,5 +83,5 @@ function price() {
   for (let i = 0; i < unity.length; i++) {
       sum += quantity[i].innerText * unity[i].innerText
   }
-  document.getElementById('tot').innerText = sum + " TND"
+  document.getElementById('tot').innerText = sum
 }
