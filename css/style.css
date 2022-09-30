@@ -199,26 +199,28 @@ header li{
     width: revert;
 }
 .unity{
-    align-self: center;
-    margin: 0;
-}
-.total{
-    color: #fff;
-    background-color: #008b8b;
-    padding: 15px 50px;
+    color: #000;
+    background-color: #008b8b29;
+    padding: 5px 10px;
     border-radius: 5px;
     align-self: center;
     font-size: 14px;
     margin: 0;
 }
+.productqtyprice p{
+    text-align: center;
+}
 
 /* Footer style */
 
-footer{
+footer {
     background-color: #fff;
-    padding: 50px 200px;
+    padding: 5px 320px;
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    bottom: 0;
+    border-top: 1px solid #008b8b;
 }
 .btn {
 	background: #008b8b;

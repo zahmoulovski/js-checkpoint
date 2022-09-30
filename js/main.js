@@ -1,4 +1,6 @@
-// i wanna add a function if there's no products in .bigcontainer after deleting all products, a h1 will show up "No Products" and .subtotal will be 0.000TND//
+// i wanna add a function if there's no products in .bigcontainer after deleting all products, a h1 will show up "No Products" and //
+
+// even tho i tried, i couldnt add the total price of single item seperatly from the total of the cart. well i'll try to learn it next time //
 
 //** Created by **//
 //** Med Yassine Zahmoul **//
@@ -13,6 +15,7 @@ let myButton = document.querySelector('button');
    } else { 
      localStorage.setItem('name', myName); 
      myHeading.innerHTML = 'Welcome, ' + myName; 
+     price()
    } 
  } 
   
@@ -61,8 +64,6 @@ for (let i=0; i<deleteBtn.length ; i++){
 
 let hearts=document.getElementsByClassName('fa-heart');
 
-console.log(hearts,'hearts')
-
 for(let colors of hearts ){
   colors.addEventListener('click',function(){
     if(colors.style.color === 'grey' ){
@@ -73,7 +74,6 @@ for(let colors of hearts ){
   })
 }
 
-
 // total price 
 
 function price() {
@@ -83,6 +83,5 @@ function price() {
   for (let i = 0; i < unity.length; i++) {
       sum += quantity[i].innerText * unity[i].innerText
   }
-  console.log(sum)
-  document.getElementById('tot').innerText = sum
+  document.getElementById('tot').innerText = sum + " TND"
 }
